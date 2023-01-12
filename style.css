@@ -51,6 +51,19 @@ a {
   text-decoration: none;
 }
 
+.container {
+  height: 100vh;
+  min-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > * {
+  width: 100%;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
