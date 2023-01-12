@@ -65,11 +65,23 @@ a {
 }
 
 .flex-center {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .flex-column {
+  display: flex;
   flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
