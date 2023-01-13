@@ -88,12 +88,12 @@ a {
 
 /** button **/
 .btn {
+  background-color: white;
+  color: #56a5eb;
   width: 20rem;
   padding: 1rem 0;
   border: 0.1rem solid #56a5eb;
   margin-bottom: 1rem;
-  color: #56a5eb;
-  background-color: white;
   font-size: 1.8rem;
   text-align: center;
   text-decoration: none;
@@ -104,6 +104,12 @@ a {
   cursor: pointer;
   box-shadow: 0 0.1rem 0.7rem 0 rgba(86, 185, 235, 0.5);
   transform: translateY(-0.1rem);
+}
+
+.btn[disabled] {
+  background-color: rgba(218, 218, 218, 0.455);
+  color: gray;
+  border: 0.1rem solid gray;
 }
 
 .btn[disabled]:hover {
