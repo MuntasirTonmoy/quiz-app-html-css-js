@@ -85,3 +85,15 @@ a {
 .hidden {
   display: none;
 }
+
+.btn {
+  width: 20rem;
+  padding: 1rem 0;
+  border: 0.1rem solid #56a5eb;
+  margin-bottom: 1rem;
+  color: #56a5eb;
+  background-color: white;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+}
