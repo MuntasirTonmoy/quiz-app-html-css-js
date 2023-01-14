@@ -22,6 +22,7 @@ let questions = [
     choice2: "alertBrowser('Hello world')",
     choice3: "text('Hello world')",
     choice4: "alert('Hello world')",
+    ans: 4,
   },
   {
     question:
@@ -30,5 +31,6 @@ let questions = [
     choice2: "<script name='aaa.js'>",
     choice3: "<script src='aaa.js'>",
     choice4: "<script file='aaa.js'>",
+    ans: 3,
   },
 ];
