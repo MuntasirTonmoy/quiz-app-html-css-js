@@ -13,9 +13,13 @@ let questions = [
     choice1: "<script>",
     choice2: "<javascript>",
     choice3: "<js>",
-    choice4: "<scripting",
+    choice4: "<scripting>",
   },
   {
     question: "How do you write 'Hello world' in an alert box?",
+    choice1: "msgBox('Hello world')",
+    choice2: "alertBrowser('Hello world')",
+    choice3: "text('Hello world')",
+    choice4: "alert('Hello world')",
   },
 ];
