@@ -25,5 +25,9 @@ let questions = [
   {
     question:
       "What is the correct syntax for refferingto an external script called 'aaa.js'?",
+    choice1: "<script href='aaa.js'>",
+    choice2: "<script name='aaa.js'>",
+    choice3: "<script src='aaa.js'>",
+    choice4: "<script file='aaa.js'>",
   },
 ];
