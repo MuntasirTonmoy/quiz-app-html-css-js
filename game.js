@@ -6,3 +6,9 @@ let acceptingAns = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
+
+let questions = [
+  {
+    question: "Inside which HTML element do we put the JavaScript",
+  },
+];
