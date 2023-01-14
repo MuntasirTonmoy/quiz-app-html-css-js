@@ -14,6 +14,7 @@ let questions = [
     choice2: "<javascript>",
     choice3: "<js>",
     choice4: "<scripting>",
+    ans: 1,
   },
   {
     question: "How do you write 'Hello world' in an alert box?",
