@@ -22,4 +22,8 @@ let questions = [
     choice3: "text('Hello world')",
     choice4: "alert('Hello world')",
   },
+  {
+    question:
+      "What is the correct syntax for refferingto an external script called 'aaa.js'?",
+  },
 ];
