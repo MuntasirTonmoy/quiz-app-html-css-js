@@ -1,2 +1,2 @@
 const question = document.querySelector(".question");
-const choices = document.querySelectorAll(".choice-text");
+const choices = Array.from(document.querySelectorAll(".choice-text"));
