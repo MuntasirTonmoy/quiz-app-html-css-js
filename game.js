@@ -68,6 +68,11 @@ const getNewQuestion = () => {
   acceptingAns = true;
 };
 
+const incrementScore = num => {
+  score += num;
+  scoreCount.innerText = score;
+};
+
 choices.forEach(choice => {
   choice.addEventListener("click", e => {
     if (!acceptingAns) return;
@@ -80,6 +85,9 @@ choices.forEach(choice => {
         ? "correct"
         : "incorrect";
 
+    if (classToApply === "correct") {
+      incrementScore(correctBonus);
+    }
     selectedChoice.parentElement.classList.add(classToApply);
 
     setTimeout(() => {
