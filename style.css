@@ -146,3 +146,13 @@ a {
   padding: 1.5rem;
   width: 100%;
 }
+
+.correct {
+  background-color: rgba(118, 222, 95, 0.515);
+  border: 0.1rem solid rgb(16, 184, 16);
+}
+
+.incorrect {
+  background-color: rgba(222, 95, 95, 0.515);
+  border: 0.1rem solid rgb(184, 16, 27);
+}
