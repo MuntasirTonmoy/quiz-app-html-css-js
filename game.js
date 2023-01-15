@@ -63,7 +63,12 @@ const getNewQuestion = () => {
 
 choices.forEach(choice => {
   choice.addEventListener("click", e => {
-    console.log(e.target);
+    if (!acceptingAns) return;
+
+    acceptingAns = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["choice"];
+    getNewQuestion();
   });
 });
 
