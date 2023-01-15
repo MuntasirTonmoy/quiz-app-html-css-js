@@ -1,5 +1,6 @@
 const question = document.querySelector(".question");
 const questionCount = document.querySelector(".question-count");
+const progressBarFill = document.querySelector(".progress-bar-fill");
 const scoreCount = document.querySelector(".score-count");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 
@@ -54,7 +55,8 @@ const getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
   questionCounter++; // when we start the game increament to 1
-  questionCount.innerText = `${questionCounter}/${maxQuestion}`;
+  questionCount.innerText = `Question ${questionCounter}/${maxQuestion}`;
+
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -89,7 +91,7 @@ choices.forEach(choice => {
       incrementScore(correctBonus);
     }
     selectedChoice.parentElement.classList.add(classToApply);
-
+    progressBarFill.style.width = `${(questionCounter / maxQuestion) * 100}%`;
     setTimeout(() => {
       selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();

@@ -129,6 +129,19 @@ a {
   text-align: center;
 }
 
+.progress-bar {
+  width: 20rem;
+  height: 3rem;
+  border: 0.2rem solid #56a5eb;
+  margin-top: 1rem;
+}
+
+.progress-bar-fill {
+  height: 3rem;
+  background-color: #56a5eb;
+  width: 0%;
+}
+
 .hud-main-text {
   text-align: center;
 }
