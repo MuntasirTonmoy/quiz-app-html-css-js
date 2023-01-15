@@ -34,3 +34,13 @@ let questions = [
     ans: 3,
   },
 ];
+
+//constant
+const correctBonus = 10;
+const maxQuestion = 3;
+
+const startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuestion = [...question];
+};
