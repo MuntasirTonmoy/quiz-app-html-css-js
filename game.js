@@ -1,4 +1,5 @@
 const question = document.querySelector(".question");
+const questionCount = document.querySelector(".question-count");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 
 let currentQuestion = {};
