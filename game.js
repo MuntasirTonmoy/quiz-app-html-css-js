@@ -61,4 +61,10 @@ const getNewQuestion = () => {
   acceptingAns = true;
 };
 
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    console.log(e.target);
+  });
+});
+
 startGame();
