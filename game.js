@@ -1,5 +1,6 @@
 const question = document.querySelector(".question");
 const questionCount = document.querySelector(".question-count");
+const scoreCount = document.querySelector(".score-count");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 
 let currentQuestion = {};
@@ -53,6 +54,7 @@ const getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
   questionCounter++; // when we start the game increament to 1
+  questionCount.innerText = `${questionCounter}/${maxQuestion}`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
