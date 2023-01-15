@@ -120,6 +120,19 @@ a {
 }
 
 /* game page */
+.hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
 .choice-container {
   display: flex;
   background-color: white;
