@@ -1,6 +1,5 @@
 const question = document.querySelector(".question");
-const choices = Array.from(document.querySelectorAll(".choice-container"));
-const choiceText = Array.from(document.querySelectorAll(".choice-text"));
+const choices = Array.from(document.querySelectorAll(".choice-text"));
 
 let currentQuestion = {};
 let acceptingAns = false;
@@ -10,7 +9,7 @@ let availableQuestions = [];
 
 let questions = [
   {
-    question: "Inside which HTML element do we put the JavaScript",
+    question: "Inside which HTML element do we put the JavaScript?",
     choice1: "<script>",
     choice2: "<javascript>",
     choice3: "<js>",
@@ -59,9 +58,7 @@ const getNewQuestion = () => {
 
   choices.forEach(choice => {
     const number = choice.dataset["choice"];
-    choiceText.forEach(c => {
-      c.innerText = currentQuestion["choice" + number];
-    });
+    choice.innerText = currentQuestion["choice" + number];
   });
 
   availableQuestions.splice(questionIndex, 1);
@@ -75,7 +72,18 @@ choices.forEach(choice => {
     acceptingAns = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["choice"];
-    getNewQuestion();
+    const classToApply =
+      parseInt(selectedAnswer) === currentQuestion.ans
+        ? "correct"
+        : "incorrect";
+
+    console.log(classToApply);
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
   });
 });
 
