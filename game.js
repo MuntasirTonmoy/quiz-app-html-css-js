@@ -1,5 +1,6 @@
 const question = document.querySelector(".question");
-const choices = Array.from(document.querySelectorAll(".choice-text"));
+const choices = Array.from(document.querySelectorAll(".choice-container"));
+const choiceText = Array.from(document.querySelectorAll(".choice-text"));
 
 let currentQuestion = {};
 let acceptingAns = false;
@@ -54,7 +55,9 @@ const getNewQuestion = () => {
 
   choices.forEach(choice => {
     const number = choice.dataset["choice"];
-    choice.innerText = currentQuestion["choice" + number];
+    choiceText.forEach(c => {
+      c.innerText = currentQuestion["choice" + number];
+    });
   });
 
   availableQuestions.splice(questionIndex, 1);
