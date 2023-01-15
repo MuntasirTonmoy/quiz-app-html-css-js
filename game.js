@@ -42,17 +42,20 @@ const maxQuestion = 3;
 const startGame = () => {
   questionCounter = 0;
   score = 0;
-  availableQuestions = [...question];
+  availableQuestions = [...questions];
+  getNewQuestion();
 };
 
 const getNewQuestion = () => {
   questionCounter++; // when we start the game increament to 1
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
-  question.innerText = currentQuestion;
+  question.innerText = currentQuestion.question;
 
   choices.forEach(choice => {
     const number = choice.dataset["choice"];
     choice.innerText = currentQuestion["choice" + number];
   });
 };
+
+startGame();
