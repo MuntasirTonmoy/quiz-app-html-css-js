@@ -26,5 +26,7 @@ saveScoreForm.addEventListener("submit", function (event) {
     score: recentScore,
   };
 
+  scores.push(scoreObj);
+
   localStorage.setItem("highScores", JSON.stringify(scores));
 });
