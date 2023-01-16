@@ -12,16 +12,18 @@
       <div class="end flex-center flex-column">
         <h2>Congratulation! 🎉</h2>
         <h1 class="score"></h1>
-        <form>
+        <form class="save-score-form">
           <input
             autofocus
             class="user-input"
             type="text"
-            name="username"
+            name="userName"
             id="username"
             placeholder="your name"
           />
-          <button type="submit" class="btn save-btn">Save Score</button>
+          <button type="submit" class="btn save-btn" disabled>
+            Save Score
+          </button>
         </form>
         <a href="/game.html" class="btn">Play Again</a>
         <a href="/highscores.html" class="btn">High scores</a>
