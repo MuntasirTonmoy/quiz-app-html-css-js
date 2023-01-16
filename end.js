@@ -4,7 +4,7 @@ const saveScoreForm = document.querySelector(".save-score-form");
 const userInput = document.querySelector(".user-input");
 const saveBtn = document.querySelector(".save-btn");
 
-scoreElm.innerText = `You score ${recentScore}`;
+scoreElm.innerText = `${recentScore || 0}`;
 // if local storage has an array of highscore it will be added or an empty array
 //local storage always store a value in string and return it in string
 const highScore = JSON.parse(localStorage.getItem("highScores")) || [];
