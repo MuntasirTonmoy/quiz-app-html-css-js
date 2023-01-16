@@ -11,7 +11,7 @@ userInput.addEventListener("keyup", e => {
   if (e.target.value) {
     saveBtn.removeAttribute("disabled");
   } else {
-    saveBtn.setAttribute("disabled", 0);
+    saveBtn.setAttribute("disabled", "");
   }
 });
 saveScoreForm.addEventListener("submit", function (event) {
