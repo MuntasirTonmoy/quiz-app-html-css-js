@@ -1,13 +1,16 @@
 const scoreElm = document.querySelector(".score");
-const score = localStorage.getItem("recentScore");
+const recentScore = localStorage.getItem("recentScore");
 const saveScoreForm = document.querySelector(".save-score-form");
 const userInput = document.querySelector(".user-input");
 const saveBtn = document.querySelector(".save-btn");
 
-scoreElm.innerText = `You score ${score}`;
+const scores = [];
+scoreElm.innerText = `You score ${recentScore}`;
+// if local storage has an array of highscore it will be added or an empty array
+//local storage always store a value in string and return it in string
+const highScore = JSON.parse(localStorage.getItem("highScores")) || [];
 
 userInput.addEventListener("keyup", e => {
-  console.log(e.target.value);
   if (e.target.value) {
     saveBtn.removeAttribute("disabled");
   } else {
@@ -17,4 +20,11 @@ userInput.addEventListener("keyup", e => {
 saveScoreForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const userName = event.target.userName.value;
+
+  const scoreObj = {
+    user: userName,
+    score: recentScore,
+  };
+
+  localStorage.setItem("highScores", JSON.stringify(scores));
 });
