@@ -55,7 +55,7 @@ a {
   height: 100vh;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,4 +181,19 @@ a {
 .incorrect {
   background-color: rgba(222, 95, 95, 0.515);
   border: 0.1rem solid rgb(184, 16, 27);
+}
+
+/* end page */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #16232f;
 }
