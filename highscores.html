@@ -8,24 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   
-      <section class="container">
-        <div class="flex-center flex-column">
-          <h1>High Scores</h1>
-          
-         <table>
-          <thead>
-            <th><td>Ranking</td>
-            <td>Name</td>
-            <td>Score</td></th>
-          </thead>
-          <tbody class="score-table">
-            
-          </tbody>
-        </table>
-        </div>
-      </section>
-    
-      <script src="/highScore.js"></script>
+    <section class="container">
+      <div class="flex-center flex-column">
+        <h1>High Scores</h1>
+        <p class="no-score-msg">Sorry, there is no high score.</p>
+        <ol class="score-list"></ol>
+        <a href="/game.html" class="btn">Play games</a>
+      </div>
+    </section>
+
+    <script src="/highScore.js"></script>
   </body>
 </html>
