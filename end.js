@@ -28,5 +28,6 @@ saveScoreForm.addEventListener("submit", function (event) {
 
   scores.push(scoreObj);
   scores.sort((a, b) => b.score - a.score);
+  scores.splice(5);
   localStorage.setItem("highScores", JSON.stringify(scores));
 });
