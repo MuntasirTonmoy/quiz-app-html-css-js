@@ -10,7 +10,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
+/* let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
     choice1: "<script>",
@@ -36,7 +36,9 @@ let questions = [
     choice4: "<script file='aaa.js'>",
     ans: 3,
   },
-];
+]; */
+
+let questions = [];
 
 //constant
 const correctBonus = 10;
