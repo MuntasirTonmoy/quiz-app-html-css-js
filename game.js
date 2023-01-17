@@ -44,7 +44,14 @@ fetch(
   "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
 )
   .then(res => res.json())
-  .then(loadedQuestions => console.log(loadedQuestions.results))
+  .then(loadedQuestions => {
+    console.log(loadedQuestions.results);
+    loadedQuestions?.results.map(question => {
+      const formattedQuestion = {
+        question: loadedQuestions.question,
+      };
+    });
+  })
   .catch(error => console.log(error));
 
 //constant
