@@ -50,6 +50,9 @@ fetch(
       const formattedQuestion = {
         question: loadedQuestions.question,
       };
+      const answerChoices = [question.incorrect_answers];
+      formattedQuestion.ans = Math.floor(Math.random() * 4) + 1;
+      console.log(formattedQuestion.ans);
     });
   })
   .catch(error => console.log(error));
