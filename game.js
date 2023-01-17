@@ -48,11 +48,15 @@ fetch(
     console.log(loadedQuestions.results);
     loadedQuestions?.results.map(question => {
       const formattedQuestion = {
-        question: loadedQuestions.question,
+        question: question.question,
       };
-      const answerChoices = [question.incorrect_answers];
+      const answerChoices = [...question.incorrect_answers];
       formattedQuestion.ans = Math.floor(Math.random() * 4) + 1;
-      console.log(formattedQuestion.ans);
+      answerChoices.splice(
+        formattedQuestion.ans - 1,
+        0,
+        question.correct_answer
+      );
     });
   })
   .catch(error => console.log(error));
