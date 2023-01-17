@@ -10,7 +10,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-/* let questions = [
+let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
     choice1: "<script>",
@@ -36,14 +36,15 @@ let availableQuestions = [];
     choice4: "<script file='aaa.js'>",
     ans: 3,
   },
-]; */
+];
 
-let questions = [];
+let s = [];
 
 fetch(
   "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
 )
-  .then(res => console.log(res))
+  .then(res => res.json())
+  .then(loadedQuestions => console.log(loadedQuestions.results))
   .catch(error => console.log(error));
 
 //constant
