@@ -57,6 +57,9 @@ fetch(
         0,
         question.correct_answer
       );
+      answerChoices.forEach((choice, index) => {
+        formattedQuestion["choice" + (index + 1)] = choice;
+      });
     });
   })
   .catch(error => console.log(error));
