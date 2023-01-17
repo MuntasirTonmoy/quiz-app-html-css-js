@@ -40,6 +40,12 @@ let availableQuestions = [];
 
 let questions = [];
 
+fetch(
+  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
+)
+  .then(res => console.log(res))
+  .catch(error => console.log(error));
+
 //constant
 const correctBonus = 10;
 const maxQuestion = 3;
