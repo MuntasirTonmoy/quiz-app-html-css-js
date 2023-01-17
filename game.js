@@ -60,6 +60,7 @@ fetch(
       answerChoices.forEach((choice, index) => {
         formattedQuestion["choice" + (index + 1)] = choice;
       });
+      console.log(formattedQuestion);
     });
   })
   .catch(error => console.log(error));
