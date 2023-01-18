@@ -69,10 +69,9 @@ fetch(
 )
   .then(res => res.json())
   .then(loadedQuestions => {
-    console.log(loadedQuestions.results);
     questions = loadedQuestions?.results.map(question => {
       const formattedQuestion = {
-        question: question.question,
+        question: decodeHTMLEntities(question.question),
       };
       const answerChoices = [...question.incorrect_answers];
       formattedQuestion.ans = Math.floor(Math.random() * 4) + 1;
