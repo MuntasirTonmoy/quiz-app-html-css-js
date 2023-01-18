@@ -10,7 +10,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
+/* let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
     choice1: "<script>",
@@ -36,9 +36,9 @@ let questions = [
     choice4: "<script file='aaa.js'>",
     ans: 3,
   },
-];
+]; */
 
-let s = [];
+let questions = [];
 
 fetch(
   "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
@@ -46,28 +46,31 @@ fetch(
   .then(res => res.json())
   .then(loadedQuestions => {
     console.log(loadedQuestions.results);
-    loadedQuestions?.results.map(question => {
+    questions = loadedQuestions?.results.map(question => {
       const formattedQuestion = {
         question: question.question,
       };
       const answerChoices = [...question.incorrect_answers];
       formattedQuestion.ans = Math.floor(Math.random() * 4) + 1;
+      //entering the answer into number array at 0-3 index
       answerChoices.splice(
         formattedQuestion.ans - 1,
         0,
         question.correct_answer
       );
       answerChoices.forEach((choice, index) => {
+        //creating choice1: question choice, choice2: question choice; thats why added +1
         formattedQuestion["choice" + (index + 1)] = choice;
       });
       return formattedQuestion;
     });
+    startGame();
   })
   .catch(error => console.log(error));
 
 //constant
 const correctBonus = 10;
-const maxQuestion = 3;
+const maxQuestion = 10;
 
 const startGame = () => {
   questionCounter = 0;
@@ -126,5 +129,3 @@ choices.forEach(choice => {
     }, 300);
   });
 });
-
-startGame();
