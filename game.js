@@ -15,6 +15,7 @@ let availableQuestions = [];
 function decodeHTMLEntities(text) {
   const entities = [
     ["amp", "&"],
+    ["acute", "´"],
     ["rsquo", "’"],
     ["lsquo", "‘"],
     ["rdquo", "”"],
