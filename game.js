@@ -10,6 +10,30 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+function decodeHTMLEntities(text) {
+  const entities = [
+    ["amp", "&"],
+    ["rsquo", "’"],
+    ["lsquo", "‘"],
+    ["rdquo", "”"],
+    ["ldquo", "“"],
+    ["apos", "'"],
+    ["#x27", "'"],
+    ["#x2F", "/"],
+    ["#039", "'"],
+    ["#47", "/"],
+    ["lt", "<"],
+    ["gt", ">"],
+    ["nbsp", " "],
+    ["quot", '"'],
+  ];
+
+  for (const elm of entities)
+    text = text.replace(new RegExp("&" + elm[0] + ";", "g"), elm[1]);
+
+  return text;
+}
+
 /* let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
