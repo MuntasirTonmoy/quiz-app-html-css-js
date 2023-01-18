@@ -53,9 +53,10 @@ a {
 
 .container {
   height: 100vh;
+  overflow-y: scroll;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

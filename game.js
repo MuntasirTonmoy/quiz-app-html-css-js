@@ -17,6 +17,7 @@ function decodeHTMLEntities(text) {
     ["lsquo", "‘"],
     ["rdquo", "”"],
     ["ldquo", "“"],
+    ["hellip", "…"],
     ["apos", "'"],
     ["#x27", "'"],
     ["#x2F", "/"],
