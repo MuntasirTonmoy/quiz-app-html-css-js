@@ -83,7 +83,7 @@ fetch(
       );
       answerChoices.forEach((choice, index) => {
         //creating choice1: question choice, choice2: question choice; thats why added +1
-        formattedQuestion["choice" + (index + 1)] = choice;
+        formattedQuestion["choice" + (index + 1)] = decodeHTMLEntities(choice);
       });
       return formattedQuestion;
     });
