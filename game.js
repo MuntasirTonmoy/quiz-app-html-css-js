@@ -88,6 +88,7 @@ fetch(
       });
       return formattedQuestion;
     });
+
     startGame();
   })
   .catch(error => console.log(error));
