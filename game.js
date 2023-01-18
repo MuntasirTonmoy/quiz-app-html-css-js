@@ -3,6 +3,8 @@ const questionCount = document.querySelector(".question-count");
 const progressBarFill = document.querySelector(".progress-bar-fill");
 const scoreCount = document.querySelector(".score-count");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
+const loader = document.querySelector(".loader");
+const game = document.querySelector(".game");
 
 let currentQuestion = {};
 let acceptingAns = false;
