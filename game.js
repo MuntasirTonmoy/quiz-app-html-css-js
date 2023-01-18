@@ -103,6 +103,8 @@ const startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
   getNewQuestion();
 };
 
