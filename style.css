@@ -120,6 +120,17 @@ a {
   transform: none;
 }
 
+/* loader */
+.loader {
+  border: 1rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1rem solid #3498db;
+  width: 6rem;
+  height: 6rem;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
 /* game page */
 .hud {
   display: flex;
